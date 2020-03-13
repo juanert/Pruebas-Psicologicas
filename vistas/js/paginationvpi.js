@@ -16,14 +16,14 @@ jQuery (document).ready(function($){
         console.log(base_url);
 
         if (btnPressed=="Previous" && currentpage>0){
-            currentpage = currentpage - 1;
+            currentpage--;
             $("#vpi-pagination").html("loading...");
             $("#vpi-pagination").load(base_url+"/vistas/modulos/vpipagination.php?page="+currentpage);
             $("#currentpage").attr("value",currentpage);
         }//if Previous
         
-        if (btnPressed=="Next" && currentpage<3){
-            currentpage = currentpage + 1;
+        if (btnPressed=="Next" && currentpage<2){
+            currentpage++;
             $("#vpi-pagination").html("loading...");
             $("#vpi-pagination").load(base_url+"/vistas/modulos/vpipagination.php?page="+currentpage);
             $("#currentpage").attr("value",currentpage);

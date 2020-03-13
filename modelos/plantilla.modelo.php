@@ -81,4 +81,28 @@ class ModeloPlantilla{
 
 	}
 
+	static public function mdlStQuestions($tabla){
+
+		$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
+
+		$stmt -> execute();
+
+		return $stmt -> fetchAll();
+
+		$stmt -> close();
+
+	}
+
+	static public function mdlQuestions($test,$tabla){
+
+		$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE test = '$test'");
+
+		$stmt -> execute();
+
+		return $stmt -> fetchAll();
+
+		$stmt -> close();
+
+	}
+
 }//class ModeloPlantilla

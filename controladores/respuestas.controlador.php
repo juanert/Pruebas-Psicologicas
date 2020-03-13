@@ -85,6 +85,30 @@ class ControladorRespuestas{
 
 	}
 
+	public function ctrStRespuestas(){
+
+		if ( (isset($_POST["1"])) && (isset($_POST["regUser"])) ) {
+		
+			$respuestas = "";
+
+			$usuario = $_POST["regUser"];
+
+			for ($i=1; $i <= 23 ; $i++) { 
+		
+				$respuestas = $respuestas.$_POST[$i];
+
+			}
+
+			$tabla = "respuestas";
+			$prueba = "Study Habits";
+
+			$respuesta = ModeloRespuestas::mdlRespuestas($tabla, $respuestas, $usuario, $prueba);
+
+		}
+
+
+	}
+
 	/*=============================================
 	BUSCADOR
 	=============================================*/
@@ -96,6 +120,32 @@ class ControladorRespuestas{
 		$respuesta = ModeloRespuestas::mdlBuscarProductos($tabla, $busqueda);
 
 		return $respuesta;
+
+	}
+
+	public function ctrAnswer($count,$prueba){
+
+		if ( (isset($_POST["1"])) && (isset($_POST["regUser"])) ) {
+		
+			$respuestas = "";
+
+			$usuario = $_POST["regUser"];
+
+			for ($i=1; $i <= $count ; $i++) { 
+				
+				if( isset($_POST[$i]) ){
+
+					$respuestas = $respuestas.$_POST[$i];
+
+				}
+
+			}
+
+			$tabla = "respuestas";
+
+			$respuesta = ModeloRespuestas::mdlAnswer($tabla, $respuestas, $usuario, $prueba);
+
+		}
 
 	}
 

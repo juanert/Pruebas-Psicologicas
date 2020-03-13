@@ -246,8 +246,6 @@ LISTAR PRODUCTOS
 
 							}else if($value["prueba"] == "Living Diagnosis Of Interest Test"){
 
-								
-
 								echo '<p>Investigación teórica en el Campo de las Ciencias Físicas y Naturales ( Ciencias Puras): '.((substr_count($value["respuestas"], '01')/count(explode(",", $value["respuestas"])))*100).'</p>';
 
 								echo '<p>Investigación teórica en el Campo de las Ciencias Humanas: '.substr_count($value["respuestas"], '02').'</p>';
@@ -280,9 +278,30 @@ LISTAR PRODUCTOS
 
 								echo '<p>Ejecución Instrumental: '.substr_count($value["respuestas"], '16').'</p>';
 
-								echo '<p> Literaria: Composición: '.substr_count($value["respuestas"], '17').'</p>';
+								echo '<p>Literaria: Composición: '.substr_count($value["respuestas"], '17').'</p>';
 
-								echo '<p> Literaria: Realización, representación: '.substr_count($value["respuestas"], '18').'</p>';
+								echo '<p>Literaria: Realización, representación: '.substr_count($value["respuestas"], '18').'</p>';
+
+							}else if($value["prueba"] == "Study Habits"){
+								
+								$respuesta = explode(",", $value["respuestas"]);
+								$positivos = 0;
+
+								foreach ($respuesta as $key => $valor2) {
+									if ($valor2 == "YES") {
+										$positivos++;
+									}
+								}
+
+								if ($positivos >= 18) {
+									echo '<p>Good prognosis for your study.</p>';
+								}else if($positivos < 18 && $positivos >= 15){
+									echo '<p>Favorable prognosis.</p>';
+								}else if($positivos < 15 && $positivos >= 11){
+									echo '<p>Unfavorable prognosis for your study.</p>';
+								}else if($positivos >= 10){
+									echo '<p>Very unfavorable forecast.</p>';
+								}
 
 							}
 

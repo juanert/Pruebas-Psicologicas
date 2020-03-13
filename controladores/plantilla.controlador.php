@@ -84,4 +84,32 @@ class ControladorPlantilla{
 
 	}
 
+	/*=============================================
+	STUDY HABITS QUESTIONS
+	=============================================*/
+
+	public function ctrStQuestions(){
+
+		$tabla = "st_questions";
+
+		$respuesta = ModeloPlantilla::mdlStQuestions($tabla);
+
+		return $respuesta;
+
+	}
+
+	/*=============================================
+	QUESTIONS
+	=============================================*/
+
+	public function ctrQuestions($test){
+
+		$tabla = "questions";
+
+		$respuesta = ModeloPlantilla::mdlQuestions($test,$tabla);
+
+		return $respuesta;
+
+	}
+
 }

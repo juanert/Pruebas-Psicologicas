@@ -72,7 +72,7 @@ if(isset($_GET["ruta"])){
 	LISTA BLANCA DE URL'S AMIGABLES
 	=============================================*/
 
-	if($rutas[0] == "buscador" ||$rutas[0] == "results" || $rutas[0] == "ldoit" || $rutas[0] == "vpi"|| $rutas[0] == "vpiselfestimates" || $rutas[0] == "nlp"){
+	if($rutas[0] == "buscador" ||$rutas[0] == "results" || $rutas[0] == "ldoit" || $rutas[0] == "vpi"|| $rutas[0] == "vpiselfestimates" || $rutas[0] == "nlp" || $rutas[0] == "study-habits" || $rutas[0] == "social-skills"){
 
 		include "modulos/".$rutas[0].".php";
 

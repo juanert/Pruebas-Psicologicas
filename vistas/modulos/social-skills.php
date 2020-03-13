@@ -61,10 +61,10 @@ FORMULARIO DE REGISTRO PARA PROYECTOS
                        
                         <?php 
 
-                            $prueba= "social-skills";
+                            $prueba= "Social Skills";
                             $test = NULL;
              				$questions = ControladorPlantilla::ctrQuestions($prueba);
-                            $count = NULL;
+                            $count = 0;
 
                             foreach ($questions as $key => $value) {
                                 $test[$key] = json_decode($questions[$key]["options"],true);

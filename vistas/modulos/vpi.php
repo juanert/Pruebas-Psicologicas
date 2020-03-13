@@ -93,6 +93,7 @@
 
                             //Loads current page
                             $newpage = 0;
+                            $prueba = "Vocational Preference Inventory";
                             
                             if (!empty($_GET['page'])){
                                 $newpage = $_GET['page'];
@@ -111,19 +112,22 @@
                                   echo'<li><input type="submit" id="next-button" class="btn.active" name="but_next" value="Next"></li>';
                                 echo '</ul>';
 
-                            echo '</div>';
-						    ?>
+                            echo '</div>
+
 
                 </div>
 
-                <!--=====================================
-                LLAMADO AL CONTROLADOR
-                ======================================-->
+                ';
 
-                <?php
+                /*=====================================
+                LLAMADO AL CONTROLADOR
+                ======================================*/
+
+
+
 
                 $registro = new ControladorRespuestas();
-					      $registro -> ctrRespuestasvpi();
+					      $registro -> ctrAnswer($count,$prueba);
                     
                 ?>
 

@@ -68,6 +68,8 @@ FORMULARIO DE REGISTRO PARA PROYECTOS
                         <?php 
 
              				$preguntas = ControladorPlantilla::ctrPreguntas();
+                            $prueba = "Living Diagnosis Of Interest Test"
+                            $count = 0;
 
 							foreach ($preguntas as $key => $value) {
 
@@ -108,7 +110,7 @@ FORMULARIO DE REGISTRO PARA PROYECTOS
 									</div>
 
 								';
-
+                                $count++;
 							}
 
 						 ?>
@@ -126,7 +128,7 @@ FORMULARIO DE REGISTRO PARA PROYECTOS
                 <?php
 
                     $registro = new ControladorRespuestas();
-					$registro -> ctrRespuestas();
+					$registro -> ctrAnswer($count,$prueba);
                     
                 ?>
 

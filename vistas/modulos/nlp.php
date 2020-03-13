@@ -64,10 +64,11 @@ NEURO-LINGUISTIC TEST
                     CONTADOR DE ELEMENTOS
                     ======================================*/
 
+                    $prueba = "Neuro-Linguistic Programming"
                     $contador = 0;
                     $ContadorCuadrilla = 1;
                     $eleccion= 1;
-                    $ContadorValor= 0;
+                    $count= 0;
 
                     /*=====================================
                     PREGUNTAS
@@ -173,7 +174,7 @@ NEURO-LINGUISTIC TEST
                                 <hr>
                             ';
 
-                        $ContadorValor++;
+                        $count++;
 
                     }
 
@@ -188,7 +189,7 @@ NEURO-LINGUISTIC TEST
                 ======================================*/
 
                 $registro = new ControladorRespuestas();
-				$registro -> ctrNlpRespuestas($NumPregunta);
+				$registro -> ctrAnswer($count,$prueba);
                 
             ?>
 

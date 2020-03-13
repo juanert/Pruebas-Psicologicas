@@ -81,7 +81,7 @@ FORMULARIO DE REGISTRO PARA PROYECTOS
 
                                     </div>
 
-                                    <div class="col-lg-9 col-md-9 col-sm-8 col-xs-9" style="    margin-bottom: 15px; margin-top: -15px;">
+                                    <div class="col-lg-9 col-md-9 col-sm-8 col-xs-9" style="margin-bottom: 15px; margin-top: -15px;">
 
                                     <span style="margin: 0px; font-size: 20px;">'.$value["pregunta"].'</span> 
 

@@ -65,7 +65,6 @@ FORMULARIO DE REGISTRO PARA PROYECTOS
                             $test = NULL;
              				$questions = ControladorPlantilla::ctrQuestions($prueba);
                             $count = 0;
-
                             foreach ($questions as $key => $value) {
                                 $test[$key] = json_decode($questions[$key]["options"],true);
                             }
@@ -94,7 +93,7 @@ FORMULARIO DE REGISTRO PARA PROYECTOS
 											
     										<label style="margin-left: 90px;">
 
-    						    				<input type="radio" id="A'.$value["id"].'" name="'.$value["id"].'" value="A," class="answer" required><p style="display: initial;">   '.$test[$key][0]["A"].'</p>
+    						    				<input type="radio" id="A'.$value["id"].'" name="'.$value["id"].'" value="A," class="answer-extensive" required><p style="display: initial;">   '.$test[$key][0]["A"].'</p>
 
     						    			</label>
 
@@ -104,7 +103,7 @@ FORMULARIO DE REGISTRO PARA PROYECTOS
 						    				
     										<label style="margin-left: 90px;">
 
-    											<input type="radio" id="B'.$value["id"].'" name="'.$value["id"].'" value="B," class="answer" required><p style="display: initial;">   '.$test[$key][0]["B"].'</p>
+    											<input type="radio" id="B'.$value["id"].'" name="'.$value["id"].'" value="B," class="answer-extensive" required><p style="display: initial;">   '.$test[$key][0]["B"].'</p>
 
     										</label>
 
@@ -114,7 +113,7 @@ FORMULARIO DE REGISTRO PARA PROYECTOS
 
                                             <label style="margin-left: 90px;">
 
-                                                <input type="radio" id="C'.$value["id"].'" name="'.$value["id"].'" value="C," class="answer" required><p style="display: initial;">   '.$test[$key][0]["C"].'</p>
+                                                <input type="radio" id="C'.$value["id"].'" name="'.$value["id"].'" value="C," class="answer-extensive" required><p style="display: initial;">   '.$test[$key][0]["C"].'</p>
 
                                             </label>
 

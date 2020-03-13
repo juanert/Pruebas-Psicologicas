@@ -102,11 +102,11 @@ class ControladorPlantilla{
 	QUESTIONS
 	=============================================*/
 
-	public function ctrQuestions($test){
+	public function ctrQuestions($prueba){
 
 		$tabla = "questions";
 
-		$respuesta = ModeloPlantilla::mdlQuestions($test,$tabla);
+		$respuesta = ModeloPlantilla::mdlQuestions($prueba,$tabla);
 
 		return $respuesta;
 

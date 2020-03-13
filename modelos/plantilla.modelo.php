@@ -93,9 +93,9 @@ class ModeloPlantilla{
 
 	}
 
-	static public function mdlQuestions($test,$tabla){
+	static public function mdlQuestions($prueba,$tabla){
 
-		$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE test = '$test'");
+		$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE test = '$prueba'");
 
 		$stmt -> execute();
 
